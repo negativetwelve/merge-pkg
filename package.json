@@ -15,5 +15,6 @@
     "build"
   ],
   "dependencies": {
+    "lodash.mergewith": "4.6.0"
   }
 }
