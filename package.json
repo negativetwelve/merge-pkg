@@ -1,0 +1,19 @@
+{
+  "name": "merge-pkg",
+  "version": "0.0.1",
+  "description": "Merge multiple package.json files together preserving key order and sorting dependencies.",
+  "license": "MIT",
+  "author": "Mark Miyashita <negativetwelve@gmail.com>",
+  "homepage": "https://github.com/negativetwelve/merge-pkg",
+  "repository": "https://github.com/negativetwelve/merge-pkg",
+  "keywords": [
+    "config",
+    "package",
+    "util"
+  ],
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+  }
+}
