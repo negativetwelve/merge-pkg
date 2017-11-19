@@ -17,9 +17,9 @@ yarn add merge-pkg
 ## Usage
 
 ```javascript
-import merge from 'merge-pkg';
+import mergePkg from 'merge-pkg';
 
-const merged = merge(firstPackageJSON, secondPackageJSON, thirdPackageJSON);
+const merged = mergePkg(firstPackageJSON, secondPackageJSON, thirdPackageJSON);
 ```
 
 ## Contributing
