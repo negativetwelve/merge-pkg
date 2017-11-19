@@ -27,9 +27,7 @@
     "rimraf": "^2.6.2"
   },
   "babel": {
-    "presets": [
-      ["jolt", {"target": "node"}]
-    ]
+    "presets": [["jolt", {"target": "node"}]]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
