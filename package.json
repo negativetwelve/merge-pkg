@@ -1,6 +1,6 @@
 {
   "name": "merge-pkg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Merge multiple package.json files together preserving key order and sorting dependencies.",
   "license": "MIT",
   "author": "Mark Miyashita <negativetwelve@gmail.com>",
