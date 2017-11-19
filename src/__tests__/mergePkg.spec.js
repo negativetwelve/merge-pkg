@@ -48,15 +48,30 @@ describe('mergePkg', () => {
     });
 
     context('with multiple dependencies', () => {
-      set('package1', () => ({dependencies: {react: '16.0.0'}}));
-      set('package2', () => ({dependencies: {rimraf: '2.6.3'}}));
+      context('with different dependencies', () => {
+        set('package1', () => ({dependencies: {react: '16.0.0'}}));
+        set('package2', () => ({dependencies: {rimraf: '2.6.3'}}));
 
-      it('should order dependencies', () => {
-        expect(mergePkg(package1, package2)).toEqual({
-          dependencies: {
-            react: '16.0.0',
-            rimraf: '2.6.3',
-          },
+        it('should order dependencies', () => {
+          expect(mergePkg(package1, package2)).toEqual({
+            dependencies: {
+              react: '16.0.0',
+              rimraf: '2.6.3',
+            },
+          });
+        });
+      });
+
+      context('with same dependencies', () => {
+        set('package1', () => ({dependencies: {react: '16.0.0'}}));
+        set('package2', () => ({dependencies: {react: '2.6.3'}}));
+
+        it('should use the value in the latest package.json', () => {
+          expect(mergePkg(package1, package2)).toEqual({
+            dependencies: {
+              react: '2.6.3',
+            },
+          });
         });
       });
     });
